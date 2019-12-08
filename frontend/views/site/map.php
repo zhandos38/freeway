@@ -15,6 +15,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="map__wrapper">
     <div id="map"></div>
     <div class="map-list__wrapper">
+        <div class="map-search__wrapper">
+            <input class="map-search" type="text" placeholder="Поиск по адресу / названию">
+            <div class="map-search__btn">Пойск</div>
+        </div>
         <ul class="map-list">
             <?php foreach ($marks as $mark): ?>
             <li class="map-item" data-id="<?= $mark['id'] ?>">
@@ -29,11 +33,33 @@ $this->params['breadcrumbs'][] = $this->title;
         </ul>
     </div>
     <div class="map-filter">
+        <div class="map-filter__availability">
+            <label class="map-filter__radio-label">
+                <input type="radio" name="availability" value="2" checked>
+                Доступен
+            </label>
+            <label class="map-filter__radio-label">
+                <input type="radio" name="availability" value="1">
+                Частично доступен
+            </label>
+            <label class="map-filter__radio-label">
+                <input type="radio" name="availability" value="0">
+                Не доступен
+            </label>
+        </div>
         <div class="map-filter__type">
-            <input class="filter-checkbox" type="checkbox" value="Больница" checked>Больница
-            <input class="filter-checkbox" type="checkbox" value="Ресторан" checked>Ресторан
-            <input class="filter-checkbox" type="checkbox" value="Аптека" checked>Аптека
-            <input class="filter-checkbox" type="checkbox" value="Кафе" checked>Кафе
+            <div class="map-filter__item">
+                <input class="filter-checkbox" type="checkbox" value="Больница" checked>Больница
+            </div>
+            <div class="map-filter__item">
+                <input class="filter-checkbox" type="checkbox" value="Ресторан" checked>Ресторан
+            </div>
+            <div class="map-filter__item">
+                <input class="filter-checkbox" type="checkbox" value="Аптека" checked>Аптека
+            </div>
+            <div class="map-filter__item">
+                <input class="filter-checkbox" type="checkbox" value="Кафе" checked>Кафе
+            </div>
         </div>
     </div>
 </div>
@@ -47,7 +73,8 @@ function init () {
     let geolocation = ymaps.geolocation,
     myMap = new ymaps.Map("map", {
             center: [51.198222, 71.416985],
-            zoom: 13
+            zoom: 13,
+            controls: []
         }, {
             searchControlProvider: 'yandex#search'
         }),
