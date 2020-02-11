@@ -228,9 +228,9 @@
             "authors": [
                 {
                     "name": "Carsten Brandt",
-                    "role": "Creator",
                     "email": "mail@cebe.cc",
-                    "homepage": "http://cebe.cc/"
+                    "homepage": "http://cebe.cc/",
+                    "role": "Creator"
                 }
             ],
             "description": "A super fast, highly extensible markdown parser for PHP",
@@ -544,9 +544,9 @@
             "authors": [
                 {
                     "name": "Dave Gandy",
-                    "role": "Developer",
                     "email": "dave@fontawesome.io",
-                    "homepage": "http://twitter.com/davegandy"
+                    "homepage": "http://twitter.com/davegandy",
+                    "role": "Developer"
                 }
             ],
             "description": "The iconic font and CSS framework",
@@ -2015,18 +2015,18 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "role": "Developer",
-                    "email": "arne@blankerts.de"
+                    "email": "arne@blankerts.de",
+                    "role": "Developer"
                 },
                 {
                     "name": "Sebastian Heuer",
-                    "role": "Developer",
-                    "email": "sebastian@phpeople.de"
+                    "email": "sebastian@phpeople.de",
+                    "role": "Developer"
                 },
                 {
                     "name": "Sebastian Bergmann",
-                    "role": "Developer",
-                    "email": "sebastian@phpunit.de"
+                    "email": "sebastian@phpunit.de",
+                    "role": "Developer"
                 }
             ],
             "description": "Component for reading phar.io manifest information from a PHP Archive (PHAR)",
@@ -4111,8 +4111,8 @@
             "authors": [
                 {
                     "name": "Arne Blankerts",
-                    "role": "Developer",
-                    "email": "arne@blankerts.de"
+                    "email": "arne@blankerts.de",
+                    "role": "Developer"
                 }
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
