@@ -4,11 +4,8 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
-use common\widgets\Alert;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
@@ -51,13 +48,16 @@ AppAsset::register($this);
                 <div class="sayit_menu_inner">
                     <ul class="sayit_menu sayit_header_menu">
                         <!-- Main -->
-                        <li class="menu-item"><a href="index.html">Главная</a></li>
+                        <li class="menu-item"><a href="<?= Url::to(['site/index']) ?>">Главная</a></li>
 
                         <!-- News -->
-                        <li class="menu-item"><a href="blog_classic.html">Новости</a></li>
+                        <li class="menu-item"><a href="<?= Url::to(['news/index']) ?>">Новости</a></li>
 
                         <!-- Articles -->
                         <li class="menu-item"><a href="blog_grid.html">Стати</a></li>
+
+                        <!-- Map -->
+                        <li class="menu-item"><a href="<?= Url::to(['site/map']) ?>">Карта</a></li>
 
                         <!-- Statue -->
                         <li class="menu-item"><a href="post_standard.html">Положение</a></li>
@@ -164,7 +164,7 @@ AppAsset::register($this);
             <!-- Item 1 -->
             <div class="ig-item">
                 <a href="javascript:void(0)">
-                    <img src="img\clipart\instagram\img-1.jpg" alt="">
+                    <img src="\img\clipart\instagram\img-1.jpg" alt="">
 
                     <span class="ig-likes-comments">
                         <span>
@@ -183,7 +183,7 @@ AppAsset::register($this);
             <!-- Item 2 -->
             <div class="ig-item">
                 <a href="javascript:void(0)">
-                    <img src="img\clipart\instagram\img-2.jpg" alt="">
+                    <img src="\img\clipart\instagram\img-2.jpg" alt="">
 
                     <span class="ig-likes-comments">
                         <span>
@@ -202,7 +202,7 @@ AppAsset::register($this);
             <!-- Item 3 -->
             <div class="ig-item">
                 <a href="javascript:void(0)">
-                    <img src="img\clipart\instagram\img-3.jpg" alt="">
+                    <img src="\img\clipart\instagram\img-3.jpg" alt="">
 
                     <span class="ig-likes-comments">
                         <span>
@@ -221,7 +221,7 @@ AppAsset::register($this);
             <!-- Item 4 -->
             <div class="ig-item">
                 <a href="javascript:void(0)">
-                    <img src="img\clipart\instagram\img-4.jpg" alt="">
+                    <img src="\img\clipart\instagram\img-4.jpg" alt="">
 
                     <span class="ig-likes-comments">
                         <span>
@@ -240,7 +240,7 @@ AppAsset::register($this);
             <!-- Item 5 -->
             <div class="ig-item">
                 <a href="javascript:void(0)">
-                    <img src="img\clipart\instagram\img-5.jpg" alt="">
+                    <img src="\img\clipart\instagram\img-5.jpg" alt="">
 
                     <span class="ig-likes-comments">
                         <span>
@@ -259,7 +259,7 @@ AppAsset::register($this);
             <!-- Item 6 -->
             <div class="ig-item">
                 <a href="javascript:void(0)">
-                    <img src="img\clipart\instagram\img-6.jpg" alt="">
+                    <img src="\img\clipart\instagram\img-6.jpg" alt="">
 
                     <span class="ig-likes-comments">
                         <span>
@@ -278,7 +278,7 @@ AppAsset::register($this);
             <!-- Item 7 -->
             <div class="ig-item">
                 <a href="javascript:void(0)">
-                    <img src="img\clipart\instagram\img-7.jpg" alt="">
+                    <img src="\img\clipart\instagram\img-7.jpg" alt="">
 
                     <span class="ig-likes-comments">
                         <span>
@@ -297,7 +297,7 @@ AppAsset::register($this);
             <!-- Item 8 -->
             <div class="ig-item">
                 <a href="javascript:void(0)">
-                    <img src="img\clipart\instagram\img-8.jpg" alt="">
+                    <img src="\img\clipart\instagram\img-8.jpg" alt="">
 
                     <span class="ig-likes-comments">
                         <span>

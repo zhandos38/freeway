@@ -1408,7 +1408,7 @@ p:empty {
 }
 
 .sayit_content, .sayit_sidebar {
-    margin-top: 60px;
+    margin-top: 60px !important;
 }
 
 .sayit_transparent_header .sayit_content,

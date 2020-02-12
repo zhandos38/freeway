@@ -21,6 +21,7 @@ class AppAsset extends AssetBundle
         'js/vanilla-tilt.min.js',
         'js/imagesloaded.pkgd.min.js',
         'js/isotope.pkgd.min.js',
+        'js/owl.carousel.min.js',
         'js/main.js',
     ];
     public $depends = [
