@@ -21,7 +21,14 @@
         "dmstr/yii2-adminlte-asset": "2.*",
         "insolita/yii2-adminlte-widgets": "~3.1",
         "mihaildev/yii2-ckeditor": "*",
-        "mihaildev/yii2-elfinder": "*"
+        "mihaildev/yii2-elfinder": "*",
+        "kartik-v/yii2-date-range": "dev-master",
+        "dkhlystov/yii2-uploadimage": "^0.3.0",
+        "yiisoft/yii2-imagine": "^2.2",
+        "himiklab/yii2-easy-thumbnail-image-helper": "*",
+        "boundstate/yii2-mailgun": "^1.0",
+        "kriswallsmith/buzz": "^1.0",
+        "nyholm/psr7": "^1.2"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

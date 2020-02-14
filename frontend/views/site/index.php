@@ -16,7 +16,7 @@ $this->title = 'Главная страница';
                                 <div class="sayit_post_slider_wrapper" id="sayit_post_slider_123344" data-autoplay="off" data-pause="yes" data-speed="8000" data-default-height="800">
                                     <!-- Item 1 -->
                                     <div class="sayit_post_slider_item item_1" data-number="1">
-                                        <div class="sayit_slider_item_wrapper sayit_js_bg_image" data-src="img/clipart/post_slider/img-1.jpg">
+                                        <div class="sayit_slider_item_wrapper sayit_js_bg_image" data-src="/img/clipart/post_slider/img-1.jpg">
                                             <div class="sayit_overlay"></div>
 
                                             <div class="sayit_post_meta_cont">
@@ -36,7 +36,7 @@ $this->title = 'Главная страница';
 
                                     <!-- Item 2 -->
                                     <div class="sayit_post_slider_item item_2" data-number="2">
-                                        <div class="sayit_slider_item_wrapper sayit_js_bg_image" data-src="img/clipart/post_slider/img-2.jpg">
+                                        <div class="sayit_slider_item_wrapper sayit_js_bg_image" data-src="/img/clipart/post_slider/img-2.jpg">
                                             <div class="sayit_overlay"></div>
 
                                             <div class="sayit_post_meta_cont">
@@ -56,7 +56,7 @@ $this->title = 'Главная страница';
 
                                     <!-- Item 3 -->
                                     <div class="sayit_post_slider_item item_3" data-number="3">
-                                        <div class="sayit_slider_item_wrapper sayit_js_bg_image" data-src="img/clipart/post_slider/img-3.jpg">
+                                        <div class="sayit_slider_item_wrapper sayit_js_bg_image" data-src="/img/clipart/post_slider/img-3.jpg">
                                             <div class="sayit_overlay"></div>
 
                                             <div class="sayit_post_meta_cont">
@@ -110,7 +110,7 @@ $this->title = 'Главная страница';
                                     <div class="sayit_blog_item">
                                         <div class="sayit_blog_item_wrapper">
                                             <a href="post_standard.html">
-                                                <img src="img\clipart\places\turkey\turkey-9.jpg" alt="">
+                                                <img src="\img\clipart\places\turkey\turkey-9.jpg" alt="">
                                                 <div class="sayit_overlay"></div>
                                                 <div class="sayit_top_overlay"></div>
                                                 <div class="sayit_bottom_overlay"></div>
@@ -141,7 +141,7 @@ $this->title = 'Главная страница';
                                     <div class="sayit_blog_item">
                                         <div class="sayit_blog_item_wrapper">
                                             <a href="post_image.html">
-                                                <img src="img\clipart\places\turkey\turkey-2.jpg" alt="">
+                                                <img src="\img\clipart\places\turkey\turkey-2.jpg" alt="">
                                                 <div class="sayit_overlay"></div>
                                                 <div class="sayit_top_overlay"></div>
                                                 <div class="sayit_bottom_overlay"></div>
@@ -172,7 +172,7 @@ $this->title = 'Главная страница';
                                     <div class="sayit_blog_item">
                                         <div class="sayit_blog_item_wrapper">
                                             <a href="post_video.html">
-                                                <img src="img\clipart\places\turkey\turkey-3.jpg" alt="">
+                                                <img src="\img\clipart\places\turkey\turkey-3.jpg" alt="">
                                                 <div class="sayit_overlay"></div>
                                                 <div class="sayit_top_overlay"></div>
                                                 <div class="sayit_bottom_overlay"></div>
@@ -203,7 +203,7 @@ $this->title = 'Главная страница';
                                     <div class="sayit_blog_item">
                                         <div class="sayit_blog_item_wrapper">
                                             <a href="post_audio.html">
-                                                <img src="img\clipart\places\turkey\turkey-10.jpg" alt="">
+                                                <img src="\img\clipart\places\turkey\turkey-10.jpg" alt="">
                                                 <div class="sayit_overlay"></div>
                                                 <div class="sayit_top_overlay"></div>
                                                 <div class="sayit_bottom_overlay"></div>
@@ -234,7 +234,7 @@ $this->title = 'Главная страница';
                                     <div class="sayit_blog_item">
                                         <div class="sayit_blog_item_wrapper">
                                             <a href="post_quote.html">
-                                                <img src="img\clipart\places\turkey\turkey-5.jpg" alt="">
+                                                <img src="\img\clipart\places\turkey\turkey-5.jpg" alt="">
                                                 <div class="sayit_overlay"></div>
                                                 <div class="sayit_top_overlay"></div>
                                                 <div class="sayit_bottom_overlay"></div>
@@ -265,7 +265,7 @@ $this->title = 'Главная страница';
                                     <div class="sayit_blog_item">
                                         <div class="sayit_blog_item_wrapper">
                                             <a href="post_link.html">
-                                                <img src="img\clipart\places\turkey\turkey-6.jpg" alt="">
+                                                <img src="\img\clipart\places\turkey\turkey-6.jpg" alt="">
                                                 <div class="sayit_overlay"></div>
                                                 <div class="sayit_top_overlay"></div>
                                                 <div class="sayit_bottom_overlay"></div>
@@ -322,7 +322,7 @@ $this->title = 'Главная страница';
                             <div class="sayit_posts_item">
                                 <div class="sayit_fimage_cont">
                                     <a href="post_standard.html">
-                                        <img src="img\clipart\recent_posts\img-1.jpg" alt="">
+                                        <img src="\img\clipart\recent_posts\img-1.jpg" alt="">
                                     </a>
                                 </div>
 
@@ -347,7 +347,7 @@ $this->title = 'Главная страница';
                             <div class="sayit_posts_item">
                                 <div class="sayit_fimage_cont">
                                     <a href="post_image.html">
-                                        <img src="img\clipart\recent_posts\img-2.jpg" alt="">
+                                        <img src="\img\clipart\recent_posts\img-2.jpg" alt="">
                                     </a>
                                 </div>
 
@@ -372,7 +372,7 @@ $this->title = 'Главная страница';
                             <div class="sayit_posts_item">
                                 <div class="sayit_fimage_cont">
                                     <a href="post_video.html">
-                                        <img src="img\clipart\recent_posts\img-3.jpg" alt="">
+                                        <img src="\img\clipart\recent_posts\img-3.jpg" alt="">
                                     </a>
                                 </div>
 
@@ -404,7 +404,7 @@ $this->title = 'Главная страница';
                 <!-- Socials -->
                 <div class="row gutters">
                     <div class="col col-6">
-                        <img src="img\clipart\socials.jpg" alt="" class="sayit_md_mb_15">
+                        <img src="\img\clipart\socials.jpg" alt="" class="sayit_md_mb_15">
                     </div>
 
                     <div class="col col-6 sayit_pl_20 sayit_md_padding_0">

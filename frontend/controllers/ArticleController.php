@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Zhandos
- * Date: 12.02.2020
- * Time: 22:09
+ * Date: 14.02.2020
+ * Time: 22:05
  */
 
 namespace frontend\controllers;
@@ -12,13 +12,13 @@ namespace frontend\controllers;
 use common\models\Post;
 use yii\web\Controller;
 
-class NewsController extends Controller
+class ArticleController extends Controller
 {
     public $layout = 'post';
 
     public function actionIndex()
     {
-        $news = Post::findAll(['type_id' => Post::TYPE_NEWS]);
+        $news = Post::findAll(['type_id' => Post::TYPE_POST]);
         return $this->render('index', [
             'news' => $news
         ]);

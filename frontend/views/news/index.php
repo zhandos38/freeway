@@ -1,6 +1,7 @@
 <?php
 use frontend\components\widgets\SideBarWidget;
 
+$this->title = 'Новости';
 ?>
 <!-- Title Block -->
 <div class="sayit_title_container row sayit_js_height sayit_js_bg_image sayit_block_with_fimage" data-src="/img/clipart/back-7.jpg" data-height="600">
