@@ -41,10 +41,6 @@ $imgPath = Yii::$app->params['staticDomain'] . 'posts/';
                 'format' => 'html'
             ],
             'title',
-            [
-                'attribute' => 'content',
-                'format' => 'text',
-            ],
             'views',
             [
                 'attribute' => 'type_id',

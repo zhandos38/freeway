@@ -30,7 +30,7 @@ AppAsset::register($this);
     <div class="row align-middle sayit_logo_left">
         <div class="col sayit_logo_container col-2">
             <div class="sayit_logo_cont">
-                <a class="sayit_image_logo sayit_retina" href="index.html"></a>
+                <a class="sayit_image_logo sayit_retina" href="<?= Url::to(['site/index']) ?>"></a>
             </div>
 
             <div class="sayit_menu_mobile_trigger">

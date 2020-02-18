@@ -74,13 +74,13 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'title' => 'Title',
-            'content' => 'Content',
-            'image' => 'Image',
-            'views' => 'Views',
-            'type_id' => 'Type ID',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'title' => 'Название',
+            'content' => 'Контент',
+            'image' => 'Рисунок',
+            'views' => 'Просмотры',
+            'type_id' => 'Тип',
+            'created_at' => 'Время добавление',
+            'updated_at' => 'Время обновление',
         ];
     }
 

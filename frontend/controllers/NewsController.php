@@ -10,6 +10,7 @@ namespace frontend\controllers;
 
 
 use common\models\Post;
+use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 
 class NewsController extends Controller
@@ -18,10 +19,14 @@ class NewsController extends Controller
 
     public function actionIndex()
     {
-        $news = Post::findAll(['type_id' => Post::TYPE_NEWS]);
-        return $this->render('index', [
-            'news' => $news
+        $dataProvider = new ActiveDataProvider([
+            'query' => Post::find()->andWhere(['type_id' => Post::TYPE_NEWS]),
+            'pagination' => [
+                'pageSize' => 4
+            ]
         ]);
+
+        return $this->render('index', ['dataProvider' => $dataProvider]);
     }
 
     public function actionView($id)

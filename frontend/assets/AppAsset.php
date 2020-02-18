@@ -16,6 +16,7 @@ class AppAsset extends AssetBundle
         'css/pm-socials.css',
         'css/font-awesome.min.css',
         'css/style.css',
+        'css/site.css',
     ];
     public $js = [
         'js/vanilla-tilt.min.js',

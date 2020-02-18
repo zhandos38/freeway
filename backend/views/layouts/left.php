@@ -19,6 +19,7 @@
                 'items' => [
                     ['label' => 'Разделы', 'options' => ['class' => 'header']],
                     ['label' => 'Пользователи', 'icon' => 'fas fa-user', 'url' => ['user/index']],
+                    ['label' => 'Посты', 'icon' => 'fas fa-user', 'url' => ['post/index']],
                     ['label' => 'Карта', 'icon' => 'fas fa-user', 'url' => ['mark/index']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
