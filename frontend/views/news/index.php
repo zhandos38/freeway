@@ -1,4 +1,6 @@
 <?php
+setlocale(LC_ALL,'ru_RU.utf8');
+
 use frontend\components\widgets\SideBarWidget;
 use yii\widgets\LinkPager;
 
@@ -32,18 +34,6 @@ $this->title = 'Новости';
 
                         </div>
 
-                        <div class="sayit_blog_listing_pagination">
-                            <nav class="navigation pagination">
-                                <div class="nav-links">
-                                    <span aria-current="page" class="page-numbers current">1</span>
-                                    <a class="page-numbers" href="#">2</a>
-                                    <span class="page-numbers dots">...</span>
-                                    <a class="page-numbers" href="#">4</a>
-                                    <a class="next page-numbers" href="#">Next <i class="fa fa-arrow-right"></i></a>
-                                </div>
-                            </nav>
-                        </div>
-
                         <div class="news-pagination__wrapper">
                             <?=
                             LinkPager::widget([
@@ -53,9 +43,11 @@ $this->title = 'Новости';
                                 'options' => [
                                     'class' => 'news-pagination'
                                 ],
-                                'linkOptions' => [
+                                'linkContainerOptions' => [
                                     'class' => 'news-pagination__item page-numbers'
-                                ]
+                                ],
+                                'nextPageLabel' => '<i class="fa fa-arrow-right"></i>',
+                                'prevPageLabel' => '<i class="fa fa-arrow-left"></i>',
                             ]);
                             ?>
                         </div>

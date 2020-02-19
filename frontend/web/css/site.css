@@ -9,3 +9,10 @@
     margin-left: 5px;
     margin-right: 5px;
 }
+
+.page-numbers {
+    font-weight: 600;
+}
+.page-numbers.current a {
+    color: #0a0a0a;
+}

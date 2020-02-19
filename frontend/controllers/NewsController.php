@@ -23,6 +23,11 @@ class NewsController extends Controller
             'query' => Post::find()->andWhere(['type_id' => Post::TYPE_NEWS]),
             'pagination' => [
                 'pageSize' => 4
+            ],
+            'sort' => [
+                'defaultOrder' => [
+                    'id' => SORT_DESC
+                ]
             ]
         ]);
 

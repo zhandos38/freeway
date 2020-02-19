@@ -97,6 +97,7 @@ class PostController extends Controller
 
         if ($model->load(Yii::$app->request->post())) {
             $model->imageFile = UploadedFile::getInstance($model, 'imageFile');
+            $model->image = $model->imageFile->baseName . '.' . $model->imageFile->extension;
             $model->updated_at = time();
             if ($model->save() && $model->upload()) {
                 return $this->redirect(['index']);

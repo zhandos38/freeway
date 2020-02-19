@@ -4,79 +4,77 @@
 /* @var $content string */
 
 use yii\helpers\Html;
-use yii\bootstrap\Nav;
-use yii\bootstrap\NavBar;
-use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
-use common\widgets\Alert;
+use yii\helpers\Url;
 
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
+<html lang="<?= Yii::$app->language ?>" class="sayit_non_transparent_header sayit_page_mode_standard sayit_fimage_position_over">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body>
+<body class="sayit_js_bg_color" data-bgcolor="#ffffff">
 <?php $this->beginBody() ?>
 
-<div class="wrap">
-    <?php
-    NavBar::begin([
-        'brandLabel' => 'Cash Project',
-        'brandUrl' => Yii::$app->homeUrl,
-        'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
-        ],
-    ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'Map', 'url' => ['/site/map']],
-        ['label' => 'About', 'url' => ['/site/about']],
-        ['label' => 'Contact', 'url' => ['/site/contact']],
-    ];
-    if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
-    } else {
-        $menuItems[] = '<li>'
-            . Html::beginForm(['/site/logout'], 'post')
-            . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
-                ['class' => 'btn btn-link logout']
-            )
-            . Html::endForm()
-            . '</li>';
-    }
-    echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems,
-    ]);
-    NavBar::end();
-    ?>
+<!-- Header -->
+<header>
+    <div class="row align-middle sayit_logo_left">
+        <div class="col sayit_logo_container col-2">
+            <div class="sayit_logo_cont">
+                <a class="sayit_image_logo sayit_retina" href="index.html"></a>
+            </div>
 
-    <div class="container-fluid">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
+            <div class="sayit_menu_mobile_trigger">
+                <div class="sayit_trigger_container">
+                    <div class="sayit_trigger_inner">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</header>
+<div class="sayit_empty_item"></div>
+
+<?= $content ?>
+
+<div class="sayit_footer">
+
+    <!-- Back To Top -->
+    <a class="sayit_back_to_top" href="javascript:void(0)">Top</a>
+
+    <footer class="sayit_footer_type_simple">
+        <div class="row">
+            <div class="col col-12">
+                <div class="row align-middle">
+                    <div class="col col-2 sayit_footer_logo_container">
+                        <a class="sayit_image_logo sayit_retina" href="index.html"></a>
+                    </div>
+
+                    <div class="col col-10 sayit_footer_menu_container">
+                        <div class="menu-footer-menu-container">
+                            <ul class="sayit_footer_menu">
+                                <li class="menu-item"><a href="about.html">About</a></li>
+                                <li class="menu-item"><a href="blog_modern.html">Blog</a></li>
+                                <li class="menu-item"><a href="typography.html">Typography</a></li>
+                                <li class="menu-item"><a href="contacts.html">Contacts</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </div>
-
-<footer class="footer">
-    <div class="container">
-        <p class="pull-left">&copy; <?= Html::encode(Yii::$app->name) ?> <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
-    </div>
-</footer>
 
 <?php $this->endBody() ?>
 </body>

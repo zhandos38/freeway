@@ -4,7 +4,7 @@
     <div class="widget widget_search">
         <form name="search_form" class="sayit_search_form" id="search_form">
             <span class="sayit_icon_search"><i class="fa fa-search"></i></span>
-            <input class="sayit_field_search" name="s" placeholder="Search" title="Search the site..." form="search_form">
+            <input class="sayit_field_search" name="s" placeholder="Поиск" title="Search the site..." form="search_form">
             <div class="clear"></div>
         </form>
     </div>
