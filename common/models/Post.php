@@ -88,7 +88,7 @@ class Post extends \yii\db\ActiveRecord
     {
         return [
               self::TYPE_NEWS => 'Новости',
-              self::TYPE_POST => 'Пост',
+              self::TYPE_POST => 'Стати',
         ];
     }
 

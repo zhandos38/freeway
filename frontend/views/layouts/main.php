@@ -48,22 +48,22 @@ AppAsset::register($this);
                 <div class="sayit_menu_inner">
                     <ul class="sayit_menu sayit_header_menu">
                         <!-- Main -->
-                        <li class="menu-item"><a href="<?= Url::to(['site/index']) ?>">Главная</a></li>
+                        <li class="menu-item <?= Yii::$app->controller->id === 'site' ? 'current-menu-ancestor' : '' ?>"><a href="<?= Url::to(['site/index']) ?>">Главная</a></li>
 
                         <!-- News -->
-                        <li class="menu-item"><a href="<?= Url::to(['news/index']) ?>">Новости</a></li>
+                        <li class="menu-item <?= Yii::$app->controller->id === 'news' ? 'current-menu-ancestor' : '' ?>"><a href="<?= Url::to(['news/index']) ?>">Новости</a></li>
 
                         <!-- Articles -->
-                        <li class="menu-item"><a href="blog_grid.html">Стати</a></li>
+                        <li class="menu-item <?= Yii::$app->controller->id === 'article' ? 'current-menu-ancestor' : '' ?>"><a href="<?= Url::to(['article/index']) ?>">Стати</a></li>
 
                         <!-- Map -->
-                        <li class="menu-item"><a href="<?= Url::to(['site/map']) ?>">Карта</a></li>
+                        <li class="menu-item <?= Yii::$app->controller->action->id === 'map' ? 'current-menu-ancestor' : '' ?>"><a href="<?= Url::to(['site/map']) ?>">Карта</a></li>
 
                         <!-- Statue -->
-                        <li class="menu-item"><a href="post_standard.html">Положение</a></li>
+                        <li class="menu-item <?= Yii::$app->controller->action->id === 'state' ? 'current-menu-ancestor' : '' ?>"><a href="<?= Url::to(['site/state']) ?>">Положение</a></li>
 
                         <!-- Contacts -->
-                        <li class="menu-item"><a href="contacts.html">Контакты</a></li>
+                        <li class="menu-item <?= Yii::$app->controller->action->id === 'contact' ? 'current-menu-ancestor' : '' ?>"><a href="<?= Url::to(['site/contact']) ?>">Контакты</a></li>
                     </ul>
                 </div>
             </div>

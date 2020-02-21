@@ -1,7 +1,8 @@
 <?php
 /* @var \common\models\Post $model */
 
-use yii\helpers\Url; ?>
+use yii\helpers\Url;
+?>
 <div class="sayit_blog_item post_item_standard">
     
     <div class="sayit_meta">

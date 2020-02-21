@@ -60,10 +60,10 @@ AppAsset::register($this);
                         <li class="menu-item <?= Yii::$app->controller->action->id === 'map' ? 'current-menu-ancestor' : '' ?>"><a href="<?= Url::to(['site/map']) ?>">Карта</a></li>
 
                         <!-- Statue -->
-                        <li class="menu-item"><a href="post_standard.html">Положение</a></li>
+                        <li class="menu-item <?= Yii::$app->controller->action->id === 'state' ? 'current-menu-ancestor' : '' ?>"><a href="<?= Url::to(['site/state']) ?>">Положение</a></li>
 
                         <!-- Contacts -->
-                        <li class="menu-item"><a href="contacts.html">Контакты</a></li>
+                        <li class="menu-item <?= Yii::$app->controller->action->id === 'contact' ? 'current-menu-ancestor' : '' ?>"><a href="<?= Url::to(['site/contact']) ?>">Контакты</a></li>
                     </ul>
                 </div>
             </div>

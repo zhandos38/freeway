@@ -4,7 +4,7 @@ setlocale(LC_ALL,'ru_RU.utf8');
 use frontend\components\widgets\SideBarWidget;
 use yii\widgets\LinkPager;
 
-$this->title = 'Новости';
+$this->title = 'Новости | ' . Yii::$app->name;
 ?>
 <!-- Title Block -->
 <div class="sayit_title_container row sayit_js_height sayit_js_bg_image sayit_block_with_fimage" data-src="/img/gazety-makro-fon.jpg" data-height="600">

@@ -293,4 +293,9 @@ class SiteController extends Controller
 
         return $this->render('map', ['marks' => $marks]);
     }
+
+    public function actionState()
+    {
+        return $this->render('state');
+    }
 }

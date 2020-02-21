@@ -28,7 +28,8 @@
         "himiklab/yii2-easy-thumbnail-image-helper": "*",
         "boundstate/yii2-mailgun": "^1.0",
         "kriswallsmith/buzz": "^1.0",
-        "nyholm/psr7": "^1.2"
+        "nyholm/psr7": "^1.2",
+        "kop/yii2-scroll-pager": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

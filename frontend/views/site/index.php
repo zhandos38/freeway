@@ -16,15 +16,15 @@ $this->title = 'Главная страница';
                                 <div class="sayit_post_slider_wrapper" id="sayit_post_slider_123344" data-autoplay="off" data-pause="yes" data-speed="8000" data-default-height="800">
                                     <!-- Item 1 -->
                                     <div class="sayit_post_slider_item item_1" data-number="1">
-                                        <div class="sayit_slider_item_wrapper sayit_js_bg_image" data-src="/img/clipart/post_slider/img-1.jpg">
+                                        <div class="sayit_slider_item_wrapper sayit_js_bg_image" data-src="/img/main.jpg">
                                             <div class="sayit_overlay"></div>
 
                                             <div class="sayit_post_meta_cont">
                                                 <div class="sayit_post_category_cont">
-                                                    <a href="#">France</a>
+                                                    <a href="#">FeeWay.kz</a>
                                                 </div>
 
-                                                <h2 class="sayit_post_title"><a href="post_standard.html">Wonderful Rural Nature</a></h2>
+                                                <h2 class="sayit_post_title"><a href="post_standard.html">Карта доступности</a></h2>
 
                                                 <div class="sayit_post_slider_nav_buttons_cont">
                                                     <a class="sayit_prev_post_slide_button sayit_inner_post_slide_button" href="javascript:void(0)" data-slide=".item_0" data-number="0"><i class="fa fa-angle-left"></i></a>
