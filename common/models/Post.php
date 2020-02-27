@@ -62,6 +62,7 @@ class Post extends \yii\db\ActiveRecord
             [['content'], 'string'],
             [['views', 'type_id', 'created_at', 'updated_at'], 'integer'],
             [['title', 'image'], 'string', 'max' => 255],
+            [['title', 'type_id', 'content'], 'required'],
 
             [['createTimeRange'], 'match', 'pattern' => '/^.+\s\-\s.+$/'],
         ];
