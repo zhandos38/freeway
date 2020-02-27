@@ -100,10 +100,10 @@ class Post extends \yii\db\ActiveRecord
 
     public function upload()
     {
-        $imgPath = \Yii::getAlias('@static') . '/posts/' . $this->imageFile->baseName . '.' . $this->imageFile->extension;
-
         if ($this->imageFile == null)
             return true;
+
+        $imgPath = \Yii::getAlias('@static') . '/posts/' . $this->imageFile->baseName . '.' . $this->imageFile->extension;
 
         if ($this->validate()) {
             $this->imageFile->saveAs($imgPath);
