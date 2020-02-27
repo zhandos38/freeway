@@ -2,6 +2,7 @@
 namespace frontend\controllers;
 
 use common\models\Mark;
+use common\models\Post;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -77,7 +78,22 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $lastNews = Post::find()
+            ->where(['type_id' => Post::TYPE_NEWS])
+            ->orderBy(['id' => SORT_DESC])
+            ->limit(6)
+            ->all();
+
+        $lastPosts = Post::find()
+            ->where(['type_id' => Post::TYPE_POST])
+            ->orderBy(['id' => SORT_DESC])
+            ->limit(3)
+            ->all();
+
+        return $this->render('index', [
+            'lastNews' => $lastNews,
+            'lastPosts' => $lastPosts
+        ]);
     }
 
     /**

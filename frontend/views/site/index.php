@@ -1,9 +1,12 @@
 <?php
+setlocale(LC_ALL,'ru_RU.utf8');
 
 /* @var $this yii\web\View */
+/* @var $post \common\models\Post */
 
 $this->title = 'Главная страница';
-?>
+
+use yii\helpers\Url; ?>
 <div class="sayit_container content_box_wide sayit_no_sidebar">
     <div class="row sayit_no_sidebar">
         <div class="col col-12 sayit_content content_box_bg_color_off">
@@ -106,197 +109,46 @@ $this->title = 'Главная страница';
                             <div class="sayit_tiny">
                                 <!-- Widget Blog Listing -->
                                 <div class="sayit_blog_listing_cont sayit_blog_listing_cont_3315 sayit_columns_3 sayit_blog_type_masonry_2 sayit_isotope_trigger">
-                                    <!-- Item 1 -->
-                                    <div class="sayit_blog_item">
-                                        <div class="sayit_blog_item_wrapper">
-                                            <a href="post_standard.html">
-                                                <img src="\img\clipart\places\turkey\turkey-9.jpg" alt="">
-                                                <div class="sayit_overlay"></div>
-                                                <div class="sayit_top_overlay"></div>
-                                                <div class="sayit_bottom_overlay"></div>
 
-                                                <div class="sayit_top_cont">
-                                                    <div class="sayit_post_categories">
-                                                        <span class="sayit_cat">Turkey</span>
+                                    <?php foreach ($lastNews as $post): ?>
+
+                                        <div class="sayit_blog_item">
+                                            <div class="sayit_blog_item_wrapper">
+                                                <a href="<?= Url::to(['news/view', 'id' => $post->id]) ?>">
+                                                    <img src="<?= Yii::$app->params['staticDomain'] . 'posts/' . $post->image ?>" alt="post_img">
+                                                    <div class="sayit_overlay"></div>
+                                                    <div class="sayit_top_overlay"></div>
+                                                    <div class="sayit_bottom_overlay"></div>
+
+                                                    <div class="sayit_top_cont">
+                                                        <div class="sayit_post_categories">
+                                                            <span class="sayit_cat"><?= $post->getTypeLabel() ?></span>
+                                                        </div>
+
+                                                        <h6 class="sayit_post_title"><?= $post->title ?></h6>
                                                     </div>
 
-                                                    <h4 class="sayit_post_title">Ut Venenatis Molestie Odio</h4>
-                                                </div>
+                                                    <div class="sayit_bottom_cont">
+                                                        <div class="sayit_post_date"><?= strftime("%a %d %B %Y", $post->created_at) ?></div>
 
-                                                <div class="sayit_bottom_cont">
-                                                    <div class="sayit_post_date">July 11, 2018</div>
+                                                        <!--                <div class="sayit_post_comments">-->
+                                                        <!--                    <i class="fa fa-comment-o"></i>-->
+                                                        <!--                    4-->
+                                                        <!--                </div>-->
 
-                                                    <div class="sayit_post_comments">
-                                                        <i class="fa fa-comment-o"></i>
-                                                        4
+                                                        <div class="clear"></div>
                                                     </div>
-
-                                                    <div class="clear"></div>
-                                                </div>
-                                            </a>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <!-- Item 2 -->
-                                    <div class="sayit_blog_item">
-                                        <div class="sayit_blog_item_wrapper">
-                                            <a href="post_image.html">
-                                                <img src="\img\clipart\places\turkey\turkey-2.jpg" alt="">
-                                                <div class="sayit_overlay"></div>
-                                                <div class="sayit_top_overlay"></div>
-                                                <div class="sayit_bottom_overlay"></div>
-
-                                                <div class="sayit_top_cont">
-                                                    <div class="sayit_post_categories">
-                                                        <span class="sayit_cat">Turkey</span>
-                                                    </div>
-
-                                                    <h4 class="sayit_post_title">Interdum Et Malesuada Fames</h4>
-                                                </div>
-
-                                                <div class="sayit_bottom_cont">
-                                                    <div class="sayit_post_date">July 11, 2018</div>
-
-                                                    <div class="sayit_post_comments">
-                                                        <i class="fa fa-comment-o"></i>
-                                                        7
-                                                    </div>
-
-                                                    <div class="clear"></div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Item 3 -->
-                                    <div class="sayit_blog_item">
-                                        <div class="sayit_blog_item_wrapper">
-                                            <a href="post_video.html">
-                                                <img src="\img\clipart\places\turkey\turkey-3.jpg" alt="">
-                                                <div class="sayit_overlay"></div>
-                                                <div class="sayit_top_overlay"></div>
-                                                <div class="sayit_bottom_overlay"></div>
-
-                                                <div class="sayit_top_cont">
-                                                    <div class="sayit_post_categories">
-                                                        <span class="sayit_cat">Turkey</span>
-                                                    </div>
-
-                                                    <h4 class="sayit_post_title">Sed Ac Placerat Elit Vitae</h4>
-                                                </div>
-
-                                                <div class="sayit_bottom_cont">
-                                                    <div class="sayit_post_date">July 11, 2018</div>
-
-                                                    <div class="sayit_post_comments">
-                                                        <i class="fa fa-comment-o"></i>
-                                                        2
-                                                    </div>
-
-                                                    <div class="clear"></div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Item 4 -->
-                                    <div class="sayit_blog_item">
-                                        <div class="sayit_blog_item_wrapper">
-                                            <a href="post_audio.html">
-                                                <img src="\img\clipart\places\turkey\turkey-10.jpg" alt="">
-                                                <div class="sayit_overlay"></div>
-                                                <div class="sayit_top_overlay"></div>
-                                                <div class="sayit_bottom_overlay"></div>
-
-                                                <div class="sayit_top_cont">
-                                                    <div class="sayit_post_categories">
-                                                        <span class="sayit_cat">Turkey</span>
-                                                    </div>
-
-                                                    <h4 class="sayit_post_title">Finibus Tortor Sit Amet</h4>
-                                                </div>
-
-                                                <div class="sayit_bottom_cont">
-                                                    <div class="sayit_post_date">July 11, 2018</div>
-
-                                                    <div class="sayit_post_comments">
-                                                        <i class="fa fa-comment-o"></i>
-                                                        0
-                                                    </div>
-
-                                                    <div class="clear"></div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Item 5 -->
-                                    <div class="sayit_blog_item">
-                                        <div class="sayit_blog_item_wrapper">
-                                            <a href="post_quote.html">
-                                                <img src="\img\clipart\places\turkey\turkey-5.jpg" alt="">
-                                                <div class="sayit_overlay"></div>
-                                                <div class="sayit_top_overlay"></div>
-                                                <div class="sayit_bottom_overlay"></div>
-
-                                                <div class="sayit_top_cont">
-                                                    <div class="sayit_post_categories">
-                                                        <span class="sayit_cat">Turkey</span>
-                                                    </div>
-
-                                                    <h4 class="sayit_post_title">Integer Sit Amet Magna</h4>
-                                                </div>
-
-                                                <div class="sayit_bottom_cont">
-                                                    <div class="sayit_post_date">July 11, 2018</div>
-
-                                                    <div class="sayit_post_comments">
-                                                        <i class="fa fa-comment-o"></i>
-                                                        9
-                                                    </div>
-
-                                                    <div class="clear"></div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Item 6 -->
-                                    <div class="sayit_blog_item">
-                                        <div class="sayit_blog_item_wrapper">
-                                            <a href="post_link.html">
-                                                <img src="\img\clipart\places\turkey\turkey-6.jpg" alt="">
-                                                <div class="sayit_overlay"></div>
-                                                <div class="sayit_top_overlay"></div>
-                                                <div class="sayit_bottom_overlay"></div>
-
-                                                <div class="sayit_top_cont">
-                                                    <div class="sayit_post_categories">
-                                                        <span class="sayit_cat">Turkey</span>
-                                                    </div>
-
-                                                    <h4 class="sayit_post_title">Etiam Sed Lobortis Tellus</h4>
-                                                </div>
-
-                                                <div class="sayit_bottom_cont">
-                                                    <div class="sayit_post_date">July 11, 2018</div>
-
-                                                    <div class="sayit_post_comments">
-                                                        <i class="fa fa-comment-o"></i>
-                                                        3
-                                                    </div>
-
-                                                    <div class="clear"></div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
+                                    <?php endforeach; ?>
 
                                 </div>
                                 <div class="clear"></div>
 
                                 <div class="sayit_load_more">
-                                    <a class="sayit_load_more_button" href="javascript:void(0)">Посмотреть все</a>
+                                    <a class="sayit_load_more_button" href="<?= Url::to(['news/index']) ?>">Посмотреть все</a>
                                 </div>
                             </div>
                         </div>
@@ -318,85 +170,42 @@ $this->title = 'Главная страница';
                 <div class="sayit_featured_posts_widget">
                     <div class="sayit_widget_container sayit_mb_10">
                         <div class="sayit_featured_posts sayit_items_3">
-                            <!-- Item 1 -->
+
+                            <?php foreach ($lastPosts as $post): ?>
+
                             <div class="sayit_posts_item">
                                 <div class="sayit_fimage_cont">
-                                    <a href="post_standard.html">
-                                        <img src="\img\clipart\recent_posts\img-1.jpg" alt="">
+                                    <a href="<?= Url::to(['article/view', 'id' => $post->id]) ?>">
+                                        <img src="<?= Yii::$app->params['staticDomain'] . 'posts/' . $post->image ?>" alt="">
                                     </a>
                                 </div>
 
                                 <div class="sayit_meta_cont">
                                     <div class="sayit_post_category">
-                                        <a href="#">Turkey</a>
+                                        <a href="<?= Url::to(['article/index']) ?>"><?= $post->getTypeLabel() ?></a>
                                     </div>
 
                                     <span>/</span>
 
-                                    <div class="sayit_post_date">July 11, 2018</div>
+                                    <div class="sayit_post_date"><?= strftime("%a %d %B %Y", $post->created_at) ?></div>
                                 </div>
 
                                 <h4 class="sayit_post_title">
-                                    <a href="post_standard.html">Pretium Dui Diam Vitae Urna</a>
+                                    <a href="<?= Url::to(['article/view', 'id' => $post->id]) ?>"><?= $post->title ?></a>
                                 </h4>
 
-                                <div class="sayit_excerpt">Proin vehicula odio ac vehicula aliquet. Nullam dolor augue, suscipit eget odio sed, auctor vestibulum urna. Duis sit amet quam vel sem...</div>
+                                <div class="sayit_excerpt">
+                                    <?= mb_strimwidth(strip_tags($post->content),0,200,'...') ?>
+                                </div>
                             </div>
 
-                            <!-- Item 2 -->
-                            <div class="sayit_posts_item">
-                                <div class="sayit_fimage_cont">
-                                    <a href="post_image.html">
-                                        <img src="\img\clipart\recent_posts\img-2.jpg" alt="">
-                                    </a>
-                                </div>
+                            <?php endforeach; ?>
 
-                                <div class="sayit_meta_cont">
-                                    <div class="sayit_post_category">
-                                        <a href="#">Italy</a>
-                                    </div>
-
-                                    <span>/</span>
-
-                                    <div class="sayit_post_date">July 11, 2018</div>
-                                </div>
-
-                                <h4 class="sayit_post_title">
-                                    <a href="post_standard.html">Etiam Luctus Ac Neque Vel Sollicitudin</a>
-                                </h4>
-
-                                <div class="sayit_excerpt">Ut nulla tortor, condimentum in magna vitae, porttitor auctor sem. Cras consectetur diam id velit euismod egestas. Nunc sodales, est...</div>
-                            </div>
-
-                            <!-- Item 3 -->
-                            <div class="sayit_posts_item">
-                                <div class="sayit_fimage_cont">
-                                    <a href="post_video.html">
-                                        <img src="\img\clipart\recent_posts\img-3.jpg" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="sayit_meta_cont">
-                                    <div class="sayit_post_category">
-                                        <a href="#">Germany</a>
-                                    </div>
-
-                                    <span>/</span>
-
-                                    <div class="sayit_post_date">July 10, 2018</div>
-                                </div>
-
-                                <h4 class="sayit_post_title">
-                                    <a href="post_standard.html">Mauris Feugiat Arcu Dolor Praesent</a>
-                                </h4>
-
-                                <div class="sayit_excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget sodales enim, et viverra est. Aenean ac enim nulla. Nunc auctor...</div>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="sayit_load_more">
-                    <a class="sayit_load_more_button" href="javascript:void(0)">Посмотреть все</a>
+                    <a class="sayit_load_more_button" href="<?= Url::to(['article/index']) ?>">Посмотреть все</a>
                 </div>
 
                 <div class="sayit_mb_120 sayit_sm_mb_0"></div>
