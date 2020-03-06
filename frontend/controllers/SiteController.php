@@ -90,9 +90,37 @@ class SiteController extends Controller
             ->limit(3)
             ->all();
 
+        $marksModel = Mark::find()->all();
+
+        foreach ($marksModel as $mark) {
+            $marks[] = [
+                'type' => "Feature",
+                "id" => $mark->id,
+                "geometry" => [
+                    "type" => "Point",
+                    "coordinates" => [
+                        $mark->latitude, $mark->longitude
+                    ]
+                ],
+                "properties" => [
+                    "type" => $mark->getTypeLabel(),
+                    "name" => $mark->name,
+                    "address" => $mark->address,
+                    "balloonContent" => $mark->destination,
+                    "hintContent" => $mark->getTypeLabel(),
+                    "clusterCaption" => $mark->getTypeLabel(),
+                    "iconCaption" => $mark->getTypeLabel()
+                ],
+                "options" => [
+                    "preset" => $mark->getTypeIcon(),
+                ]
+            ];
+        }
+
         return $this->render('index', [
             'lastNews' => $lastNews,
-            'lastPosts' => $lastPosts
+            'lastPosts' => $lastPosts,
+            'marks' => $marks
         ]);
     }
 

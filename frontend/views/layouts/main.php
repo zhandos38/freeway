@@ -56,9 +56,6 @@ AppAsset::register($this);
                         <!-- Articles -->
                         <li class="menu-item <?= Yii::$app->controller->id === 'article' ? 'current-menu-ancestor' : '' ?>"><a href="<?= Url::to(['article/index']) ?>">Стати</a></li>
 
-                        <!-- Map -->
-                        <li class="menu-item <?= Yii::$app->controller->action->id === 'map' ? 'current-menu-ancestor' : '' ?>"><a href="<?= Url::to(['site/map']) ?>">Карта</a></li>
-
                         <!-- Statue -->
                         <li class="menu-item <?= Yii::$app->controller->action->id === 'state' ? 'current-menu-ancestor' : '' ?>"><a href="<?= Url::to(['site/state']) ?>">Положение</a></li>
 

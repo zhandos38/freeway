@@ -3,7 +3,7 @@ if(typeof ymaps !== 'undefined'){
 }
 
 function init () {
-    var center   = [51.198222, 71.416985];
+    var center   = [42.330186, 69.592237];
     myMap = new ymaps.Map("map", {
         center: center,
         zoom: 12
