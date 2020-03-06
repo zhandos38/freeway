@@ -72,7 +72,7 @@ function init () {
     let marks = $marks;
     let geolocation = ymaps.geolocation,
     myMap = new ymaps.Map("map", {
-            center: [51.198222, 71.416985],
+            center: [42.330186, 69.592237],
             zoom: 13,
             controls: []
         }, {
