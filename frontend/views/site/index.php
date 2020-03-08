@@ -307,7 +307,7 @@ function init () {
     /* Добавления objectManager на карту */
     myMap.geoObjects.add(objectManager);
     
-    checkTypes();
+    // checkTypes();
     // checkAvailability();
     
     /* Проверка фильтров */
@@ -317,8 +317,8 @@ function init () {
     
     function checkTypes() {
         let filterQuery = '';
-        let checkboxesLength = $('.filter-checkbox:checked').length;
-        $('.filter-checkbox:checked').each(function(index) {
+        let checkboxesLength = $('.filter-type:checked').length;
+        $('.filter-type:checked').each(function(index) {
             let item = $(this);
             filterQuery += 'properties.type == "' + item.val() + '"';
             if (index !== checkboxesLength - 1)

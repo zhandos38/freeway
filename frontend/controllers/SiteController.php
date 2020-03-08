@@ -103,7 +103,7 @@ class SiteController extends Controller
                     ]
                 ],
                 "properties" => [
-                    "type" => $mark->getTypeLabel(),
+                    "type" => $mark->type_id,
                     "availability" => $mark->availability_id,
                     "name" => $mark->name,
                     "address" => $mark->address,
