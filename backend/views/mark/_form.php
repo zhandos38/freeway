@@ -5,6 +5,7 @@ use mihaildev\elfinder\ElFinder;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use backend\assets\MarkAsset;
+use common\models\Mark;
 
 MarkAsset::register($this);
 
@@ -24,7 +25,7 @@ MarkAsset::register($this);
             <?= $form->field($model, 'address')->textInput(['maxlength' => true]) ?>
         </div>
         <div class="col-md-4">
-            <?= $form->field($model, 'type_id')->dropDownList(\common\models\Mark::getTypesLabel(), ['prompt' => 'Выберите тип']) ?>
+            <?= $form->field($model, 'type_id')->dropDownList(Mark::getTypesLabel(), ['prompt' => 'Выберите тип']) ?>
         </div>
     </div>
 
@@ -40,6 +41,9 @@ MarkAsset::register($this);
         </div>
         <div class="col-md-4">
             <?= $form->field($model, 'built_at')->textInput() ?>
+        </div>
+        <div class="col-md-4">
+            <?= $form->field($model, 'availability_id')->dropDownList(Mark::getAvailabilitiesLabel(), ['prompt' => 'Выберите тип']) ?>
         </div>
     </div>
 

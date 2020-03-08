@@ -55,7 +55,7 @@ class Mark extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['building_category_id', 'floors', 'built_at', 'building_type_id', 'type_id'], 'integer'],
+            [['building_category_id', 'floors', 'built_at', 'building_type_id', 'type_id', 'availability_id'], 'integer'],
             [['name', 'address'], 'string', 'max' => 255],
             [ 'destination', 'string'],
             [['longitude', 'latitude'], 'number']
@@ -72,6 +72,7 @@ class Mark extends \yii\db\ActiveRecord
             'name' => 'Имя',
             'address' => 'Адрес',
             'type_id' => 'Тип',
+            'availability_id' => 'Доступность',
             'building_category_id' => 'Категория',
             'floors' => 'Этажы',
             'built_at' => 'Год постройки',
