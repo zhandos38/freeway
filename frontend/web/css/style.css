@@ -40,6 +40,8 @@ Project: SayIT
 .alignnone {
     margin: 5px 20px 20px 0;
 }
+h2{
+}
 
 img.alignnone {
     margin: 29px 0 0 0;
@@ -255,7 +257,6 @@ body {
     background: #f8f8f8;
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
-    line-height: 30px;
     font-weight: 400;
     color: #303030;
     -webkit-font-smoothing: antialiased;
@@ -613,7 +614,7 @@ header {
     font-family: "Open Sans", sans-serif;
     position: relative;
     z-index: 30000;
-    padding: 0 30px;
+    padding: 0 300px;
     -webkit-transition: all .3s;
     transition: all .3s;
 }
@@ -629,7 +630,7 @@ header.sayit_sticky_menu,
 html.sayit_transparent_header header.sayit_sticky_menu,
 html.sayit_fimage_position_over header.sayit_sticky_menu {
     width: 100%;
-    background: #ffffff;
+    background: #087392;
     box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
     position: fixed;
     top: 0;
@@ -645,7 +646,7 @@ html.sayit_fimage_position_over .admin-bar header.sayit_sticky_menu {
 html.sayit_transparent_header header,
 html.sayit_fimage_position_over header {
     width: 100%;
-    background-color: transparent;
+    background-color: #087392;
     position: absolute;
     z-index: 30000;
 }
@@ -718,13 +719,17 @@ header .sayit_menu li a {
 
 .sayit_transparent_header header.sayit_sticky_menu .sayit_menu > li > a,
 .sayit_fimage_position_over header.sayit_sticky_menu .sayit_menu > li > a {
-    color: #000000;
+    color: #FFFFFF;
 }
 
 header .sayit_menu li > a {
     text-transform: uppercase;
 }
-
+.main_title{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 15px;
+}
 header .sayit_menu > li:first-child {
     margin-left: 0;
 }
@@ -883,8 +888,8 @@ footer .sayit_image_logo {
 
 header .sayit_image_logo.sayit_retina,
 footer .sayit_image_logo.sayit_retina {
-    width: 74px;
-    height: 36px;
+    width: 150px;
+    height: 72px;
     background-size: 74px 36px;
 }
 
@@ -897,7 +902,6 @@ header.sayit_coming_soon_header .sayit_image_logo {
 
 .sayit_transparent_header header .sayit_image_logo.sayit_retina,
 header.sayit_coming_soon_header .sayit_image_logo.sayit_retina {
-    background-size: 74px 36px;
 }
 
 header.sayit_sticky_menu .sayit_image_logo,
@@ -910,6 +914,7 @@ header.sayit_sticky_menu .sayit_image_logo.sayit_retina,
 .sayit_fimage_position_over header .sayit_image_logo.sayit_retina,
 html.sayit_page_mode_fullscreen header .sayit_image_logo.sayit_retina {
     background-size: 74px 36px;
+    height: 40px;
 }
 
 @media only screen and (max-width: 737px) {
@@ -921,7 +926,7 @@ html.sayit_page_mode_fullscreen header .sayit_image_logo.sayit_retina {
 
 header .sayit_logo_cont {
     line-height: 1px;
-    padding: 25px 0;
+    padding: 10px 0;
 }
 
 header.logo_center .sayit_menu_inner, header.logo_center .sayit_menu_inner .sayit_menu {
@@ -3379,7 +3384,8 @@ body .sayit_widget_title.sayit_subtitle_align_right .sayit_subtitle_cont {
 
 .sayit_tiny ul li,
 .sayit_tiny ol li {
-    margin-bottom: 9px;
+    border-bottom: 1px solid #dedede;
+    display: block;
 }
 
 .sayit_tiny ol {
@@ -4777,7 +4783,12 @@ header .sayit_header_socials .sayit_footer_social_button {
     .sayit_md_visible_block {
         display: block;
     }
-    
+    header{
+        padding: 0 30px;
+    }
+    .map-list{
+        display: none;
+    }
     .sayit_logo_container,
     .sayit_menu_container,
     .sayit_header_socials_and_search_container {

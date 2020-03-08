@@ -11,10 +11,10 @@
 }
 .map-list__wrapper {
     position: absolute;
-    max-width: 400px;
+    max-width: 300px;
     overflow: hidden;
     background: #fff;
-    top: 176px;
+    top: 134px;
 }
 .map-list {
     list-style: none;
@@ -35,13 +35,16 @@
 .map-search__btn {
     position: absolute;
     top: 15px;
-    right: 22px;
-    padding: 6px 12px;
+    right: 0px;
+    padding: 4px 16px 4px 16px;
+    text-align: center;
+    background-color: #434343;
+    color: white;
     cursor: pointer;
     transition: all 0.5s ease;
 }
 .map-search__btn:hover {
-    background: #f7f7f7;
+    background: #66ccc7;
 }
 .map-item {
     cursor: pointer;
@@ -56,8 +59,9 @@
 }
 .map-filter {
     position: absolute;
-    top: 100px;
-    background: #fff;
+    top: 0px;
+    background: #f0f8ff;
+    width: 100%;
     display: flex;
     padding: 16px;
 }

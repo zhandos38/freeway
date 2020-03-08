@@ -27,7 +27,7 @@ use yii\helpers\Url; ?>
                                                     <a href="#">www.invamap.kz</a>
                                                 </div>
 
-                                                <h2 class="sayit_post_title"><a href="#">Шымкент - город без барьеров</a></h2>
+                                                <h2 class="sayit_post_title"><a href="post_standard.html">Шымкент - город без барьеров доступности</a></h2>
 
                                                 <div class="sayit_post_slider_nav_buttons_cont">
                                                     <a class="sayit_prev_post_slide_button sayit_inner_post_slide_button" href="javascript:void(0)" data-slide=".item_0" data-number="0"><i class="fa fa-angle-left"></i></a>
@@ -44,10 +44,10 @@ use yii\helpers\Url; ?>
 
                                             <div class="sayit_post_meta_cont">
                                                 <div class="sayit_post_category_cont">
-                                                    <a href="#">iNvaMap</a>
+                                                    <a href="#">France</a>
                                                 </div>
 
-                                                <h2 class="sayit_post_title"><a href="#">Цель нашего проекта − развитие безбарьерной среды в городах.</a></h2>
+                                                <h2 class="sayit_post_title"><a href="post_image.html">Lovely Dinner</a></h2>
 
                                                 <div class="sayit_post_slider_nav_buttons_cont">
                                                     <a class="sayit_prev_post_slide_button sayit_inner_post_slide_button" href="javascript:void(0)" data-slide=".item_1" data-number="1"><i class="fa fa-angle-left"></i></a>
@@ -58,12 +58,30 @@ use yii\helpers\Url; ?>
                                     </div>
 
                                     <!-- Item 3 -->
-                                   
+                                    <div class="sayit_post_slider_item item_3" data-number="3">
+                                        <div class="sayit_slider_item_wrapper sayit_js_bg_image" data-src="/img/clipart/post_slider/img-3.jpg">
+                                            <div class="sayit_overlay"></div>
+
+                                            <div class="sayit_post_meta_cont">
+                                                <div class="sayit_post_category_cont">
+                                                    <a href="#">France</a>
+                                                </div>
+
+                                                <h2 class="sayit_post_title"><a href="post_video.html">About Public Transport</a></h2>
+
+                                                <div class="sayit_post_slider_nav_buttons_cont">
+                                                    <a class="sayit_prev_post_slide_button sayit_inner_post_slide_button" href="javascript:void(0)" data-slide=".item_2" data-number="2"><i class="fa fa-angle-left"></i></a>
+                                                    <a class="sayit_next_post_slide_button sayit_inner_post_slide_button" href="javascript:void(0)" data-slide=".item_4" data-number="4"><i class="fa fa-angle-right"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <!-- Slider Navigation -->
                                     <div class="sayit_post_slider_nav">
                                         <a class="sayit_post_slider_nav_button button_1" href="javascript:void(0)" data-slide=".item_1"></a>
                                         <a class="sayit_post_slider_nav_button button_2" href="javascript:void(0)" data-slide=".item_2"></a>
-                                    
+                                        <a class="sayit_post_slider_nav_button button_3" href="javascript:void(0)" data-slide=".item_3"></a>
                                     </div>
                                 </div>
                             </div>
@@ -245,31 +263,24 @@ use yii\helpers\Url; ?>
                 <!-- Socials -->
                 <div class="row gutters">
                     <div class="col col-6">
-                        <img src="\img\clipart\about.jpg" alt="" class="sayit_md_mb_15">
+                        <img src="\img\clipart\socials.jpg" alt="" class="sayit_md_mb_15">
                     </div>
 
                     <div class="col col-6 sayit_pl_20 sayit_md_padding_0">
                         <div class="sayit_widget_title">
                             <div class="sayit_widget_container sayit_text_align_center sayit_mb_27 sayit_mt_20">
-                                <h2 class="sayit_element_heading sayit_view_type_1">О нас</h2>
+                                <h2 class="sayit_element_heading sayit_view_type_1">Посетите наши соц. сети</h2>
                             </div>
                         </div>
 
-                        <p class="sayit_text_align_center sayit_mb_45">Архитектура большинство  зданий неприветлива к людям с инвалидностью, мамам с колясками, пожилым людям, велосипедистам. В нашей стране таких людей более 2,5 млн., и, чтобы обеспечить свободу перемещения для них, необходимы пандусы, широкие проходы, плавные съезды с тротуаров и т.д. 
-<h2 class="sayit_element_heading sayit_view_type_1">Цель нашего проекта − развитие безбарьерной среды в городах.</h2>
-<b>В рамках проекта планируется:</b><br>
- 1) Создать онлайн-карты городов  и карты для авто-навигаторов, на которых будут отмечены общественные и коммерческие организации с учетом их «доступности». 
-<br>
- 2) Популяризовать идею безбарьерной среды. Повысить престижность «доступности» и тем самым побудить организации адаптировать свои помещения для людей с ограниченной подвижностью.
- Разработать информационный портал invamap.kz, посвященный вопросам безбарьерной среды.
-<br><br>
-                         </p>
-                        <br>
+                        <p class="sayit_text_align_center sayit_mb_45">Nunc laoreet nunc ac vulputate tincidunt. Cras pellentesque eros justo, sed dignissim ut. Nunc laoreet nunc ac vulputate tincidunt. Pellentesque sed ipsum congue, laoreet erat vitae. Donec efficitur ligula eu metus. Nulla et commodo velit. Mauris efficitur turpis sit amet sem accumsan iaculis. Donec efficitur ligula eu metus. Nulla et commodo velit. Mauris efficitur turpis sit amet sem accumsan iaculis. Donec efficitur ligula eu metus. </p>
+
                         <div class="sayit_social_icons_widget">
                             <div class="sayit_widget_container sayit_text_align_center">
                                 <a class="sayit_social_icon" href="#" target="_blank"><i class="fa fa-instagram"></i></a>
                                 <a class="sayit_social_icon" href="#" target="_blank"><i class="fa fa-twitter"></i></a>
                                 <a class="sayit_social_icon" href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a class="sayit_social_icon" href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
