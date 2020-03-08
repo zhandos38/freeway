@@ -13,7 +13,7 @@ class m191207_113357_add_availability_id_column_to_mark_table extends Migration
      */
     public function safeUp()
     {
-        $this->addColumn($this->tableName, 'availability_id', $this->integer()->after('working_hours'));
+        $this->addColumn($this->tableName, 'availability_id', $this->integer()->after('working_hours')->defaultValue(1));
     }
 
     /**

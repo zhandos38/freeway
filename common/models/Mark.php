@@ -32,6 +32,14 @@ class Mark extends \yii\db\ActiveRecord
     const TYPE_RESTAURANT = 1;
     const TYPE_SHOP = 2;
     const TYPE_PHARMACY = 3;
+    const TYPE_HOTEL = 4;
+    const TYPE_CULTURE_RELIGION = 5;
+    const TYPE_EDUCATION = 6;
+    const TYPE_ORGANIZATION = 7;
+    const TYPE_SPORT_TOURISM_RELAX = 8;
+    const TYPE_TRANSPORT = 9;
+    const TYPE_SERVICE = 10;
+    const TYPE_FINANCE_CONNECT = 11;
 
     /**
      * {@inheritdoc}
@@ -91,10 +99,18 @@ class Mark extends \yii\db\ActiveRecord
     public static function getTypesLabel()
     {
         return [
-            self::TYPE_HOSPITAL => 'Больница',
-            self::TYPE_RESTAURANT => 'Ресторан',
-            self::TYPE_SHOP => 'Магазин',
+            self::TYPE_HOSPITAL => 'Больницы',
+            self::TYPE_RESTAURANT => 'Рестораны и кафе',
+            self::TYPE_SHOP => 'Магазины и торговля',
             self::TYPE_PHARMACY => 'Аптека',
+            self::TYPE_HOTEL => 'Гостиница',
+            self::TYPE_CULTURE_RELIGION => 'Культура и религия',
+            self::TYPE_EDUCATION => 'Образование',
+            self::TYPE_ORGANIZATION => 'Организации',
+            self::TYPE_SPORT_TOURISM_RELAX => 'Спорт, отдых и туризм',
+            self::TYPE_TRANSPORT => 'Транспорт',
+            self::TYPE_SERVICE => 'Услуги и сервис',
+            self::TYPE_FINANCE_CONNECT => 'Финансы и связь',
         ];
     }
 

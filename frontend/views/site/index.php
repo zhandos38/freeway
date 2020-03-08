@@ -6,6 +6,7 @@ setlocale(LC_ALL,'ru_RU.utf8');
 
 $this->title = 'Главная страница';
 
+use common\models\Mark;
 use yii\helpers\Url; ?>
 <div class="sayit_container content_box_wide sayit_no_sidebar">
     <div class="row sayit_no_sidebar">
@@ -93,32 +94,22 @@ use yii\helpers\Url; ?>
                     </div>
                     <div class="map-filter">
                         <div class="map-filter__availability">
+                            <?php foreach (Mark::getAvailabilitiesLabel() as $key => $item): ?>
                             <label class="map-filter__radio-label">
-                                <input type="radio" name="availability" value="2" checked>
-                                Доступен
+                                <input class="filter-availability" type="checkbox" name="availability" value="<?= $key ?>" checked>
+                                <?= $item ?>
                             </label>
-                            <label class="map-filter__radio-label">
-                                <input type="radio" name="availability" value="1">
-                                Частично доступен
-                            </label>
-                            <label class="map-filter__radio-label">
-                                <input type="radio" name="availability" value="0">
-                                Не доступен
-                            </label>
+                            <?php endforeach; ?>
                         </div>
                         <div class="map-filter__type">
+                            <?php foreach (Mark::getTypesLabel() as $key => $item): ?>
                             <div class="map-filter__item">
-                                <input class="filter-checkbox" type="checkbox" value="Больница" checked>Больница
+                                <label for="<?= $key . $item ?>" class="map-filter__label">
+                                    <input id="<?= $key . $item ?>" class="filter-type" type="checkbox" value="<?= $key ?>" checked>
+                                    <?= $item ?>
+                                </label>
                             </div>
-                            <div class="map-filter__item">
-                                <input class="filter-checkbox" type="checkbox" value="Ресторан" checked>Ресторан
-                            </div>
-                            <div class="map-filter__item">
-                                <input class="filter-checkbox" type="checkbox" value="Аптека" checked>Аптека
-                            </div>
-                            <div class="map-filter__item">
-                                <input class="filter-checkbox" type="checkbox" value="Кафе" checked>Кафе
-                            </div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -316,8 +307,15 @@ function init () {
     /* Добавления objectManager на карту */
     myMap.geoObjects.add(objectManager);
     
+    checkTypes();
+    // checkAvailability();
+    
     /* Проверка фильтров */
-    $('.filter-checkbox').on('change', function(event) {
+    $('.filter-type').on('change', function(event) {
+        checkTypes();
+    });
+    
+    function checkTypes() {
         let filterQuery = '';
         let checkboxesLength = $('.filter-checkbox:checked').length;
         $('.filter-checkbox:checked').each(function(index) {
@@ -328,7 +326,25 @@ function init () {
         });
         objectManager.setFilter(filterQuery);
         console.log(filterQuery);
+    }
+    
+    /* Проверка фильтров */
+    $('.filter-availability').on('change', function(event) {
+        checkAvailability();
     });
+    
+    function checkAvailability() {
+        let filterQuery = '';
+        let checkboxesLength = $('.filter-availability:checked').length;
+        $('.filter-availability:checked').each(function(index) {
+            let item = $(this);
+            filterQuery += 'properties.availability == "' + item.val() + '"';
+            if (index !== checkboxesLength - 1)
+                filterQuery += ' || ';
+        });
+        objectManager.setFilter(filterQuery);
+        console.log(filterQuery);
+    }
     
     $(document).on('click', '.map-item', function() {
         let objectId = $(this).data('id');
