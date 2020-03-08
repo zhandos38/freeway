@@ -51,8 +51,8 @@ return [
             'class' => 'mihaildev\elfinder\PathController',
             'access' => ['@'],
             'root' => [
-                'baseUrl'=>'http://static.freeway',
-                'basePath'=>'@static',
+                'baseUrl' => 'http://static.freeway',
+                'basePath' => '@static',
                 'path' => 'upload/global',
                 'name' => 'Global'
             ],

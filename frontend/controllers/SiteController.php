@@ -104,6 +104,7 @@ class SiteController extends Controller
                 ],
                 "properties" => [
                     "type" => $mark->getTypeLabel(),
+                    "availability" => $mark->availability_id,
                     "name" => $mark->name,
                     "address" => $mark->address,
                     "balloonContent" => $mark->destination,
